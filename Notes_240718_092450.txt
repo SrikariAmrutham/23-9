@@ -1,0 +1,183 @@
+import React from 'react';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import './App.css'; // Optional: Import your custom CSS for additional styling
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <main className="container mt-5">
+        <AboutMe />
+        <hr className="my-5" />
+        <Projects />
+        <hr className="my-5" />
+        <Skills />
+        <hr className="my-5" />
+        <Contact />
+      </main>
+      <footer className="bg-dark text-light text-center py-3">
+        {/* Footer content here */}
+        &copy; 2024 Your Name
+      </footer>
+    </div>
+  );
+}
+
+export default App;
+Header Component (Header.js)
+jsx
+Copy code
+import React from 'react';
+
+const Header = () => {
+  return (
+    <header className="bg-primary text-light p-4 mb-5">
+      <div className="container">
+        <h1 className="display-4">Portfolio</h1>
+        <p className="lead">Showcase of my work and skills</p>
+      </div>
+    </header>
+  );
+}
+
+export default Header;
+AboutMe Component (AboutMe.js)
+jsx
+Copy code
+import React from 'react';
+
+const AboutMe = () => {
+  return (
+    <section id="about">
+      <div className="row">
+        <div className="col-md-6">
+          <h2 className="mb-4">About Me</h2>
+          <p className="lead">Brief introduction about yourself...</p>
+        </div>
+        <div className="col-md-6">
+          <img src="path_to_your_image" alt="Profile" className="img-fluid rounded-circle" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default AboutMe;
+Projects Component (Projects.js)
+jsx
+Copy code
+import React from 'react';
+
+const Projects = () => {
+  return (
+    <section id="projects">
+      <h2 className="mb-4">Projects</h2>
+      {/* List of projects */}
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <div className="card">
+            <img src="project_image_url" className="card-img-top" alt="Project" />
+            <div className="card-body">
+              <h5 className="card-title">Project Name</h5>
+              <p className="card-text">Project description...</p>
+              <a href="#" className="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        {/* Repeat for each project */}
+      </div>
+    </section>
+  );
+}
+
+export default Projects;
+Skills Component (Skills.js)
+jsx
+Copy code
+import React from 'react';
+
+const Skills = () => {
+  return (
+    <section id="skills">
+      <h2 className="mb-4">Skills</h2>
+      <div className="row">
+        <div className="col-md-6">
+          <h5>Programming Languages</h5>
+          <ul className="list-unstyled">
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>React</li>
+            {/* Add more skills */}
+          </ul>
+        </div>
+        <div className="col-md-6">
+          <h5>Tools & Technologies</h5>
+          <ul className="list-unstyled">
+            <li>Git</li>
+            <li>Bootstrap</li>
+            <li>Node.js</li>
+            {/* Add more skills */}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Skills;
+Contact Component (Contact.js)
+jsx
+Copy code
+import React from 'react';
+
+const Contact = () => {
+  return (
+    <section id="contact">
+      <h2 className="mb-4">Contact Me</h2>
+      <form>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input type="text" className="form-control" id="name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email address</label>
+          <input type="email" className="form-control" id="email" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea className="form-control" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </form>
+    </section>
+  );
+}
+
+export default Contact;
+CSS (App.css)
+css
+Copy code
+/* Optional: Add custom CSS for additional styling */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Example styles for header */
+#about {
+  padding: 40px 0;
+}
+
+/* Customize further as per your design */
+Explanation:
+App Component: This is the main component that renders all other components (Header, AboutMe, Projects, Skills, Contact). It also includes a basic layout using Bootstrap classes.
+Header Component: Displays a header section with a title and description.
+AboutMe Component: Displays information about yourself with an image.
+Projects Component: Displays a section for showcasing your projects with sample project cards.
+Skills Component: Lists your skills in programming languages and tools.
+Contact Component: Provides a form for visitors to contact you.
+CSS (App.css): Optional file for custom styles.
+You can further expand and customize each component based on your specific requirements and design preferences. This setup gives you a basic structure to start with and build upon for your portfolio using React.
